@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>5 App</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			font-family: 'Montserrat', sans-serif;
+		}
+		header{
+			height: 650px;
+			background-color: #874EED;
+			width: 100%;
+		}
+		.header-content{
+			display: grid;
+			grid-template-columns: auto auto;
+			text-align: center;
+			grid-gap:0px;
+
+		}
+		.header-content ul{
+			margin:200px auto 5px auto;
+			list-style: none;
+			padding: 5px;
+		}
+		
+		.header-content ul li p{
+			text-align: left;	
+			width: 560px;
+			font-size: 18px;
+			color: white;
+		}
+		.header-content ul li h1{
+			text-align: left;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 56px;
+			color: white;
+			
+		}
+		.header-content ul li a{
+			display: inline-block;
+			text-decoration: none;
+			text-align: center;
+			color: #3600A8;
+			font-size:18px;
+			width: 261px;
+			height: 62px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			line-height: 60px;
+			border-radius: 30px;
+			background-color: white;
+			margin-top:10px;
+
+		}
+		section{
+			height:650px;
+			background-color:#3B31A8;
+			background-size: cover;
+		}
+		.container{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			align-content: center;
+			text-align: center;
+			grid-gap: 15px;
+			width: 922px;
+			margin: auto;
+			padding: 89px 10px 10px 10px;
+
+		}
+		.container img{
+			width: 100%;
+			max-width: 100px;
+			
+		}
+		.container ul{
+			list-style: none;
+			padding: 5px;
+			font-size: 16px;
+			color: rgb(255, 255, 255);
+		}
+		section a{
+			display: inline-block;
+			text-decoration: none;
+			text-align: center;
+			color: #3600A8;
+			font-size:18px;
+			width: 442px;
+			height: 62px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			line-height: 60px;
+			border-radius: 30px;
+			background-color: white;
+			margin:50px auto 10px auto;
+		}
+		.overlay{
+		  width: 100%;
+		  height: 100%;
+		  background: rgba(0,0,0,.5);
+		  position:fixed;
+		  top:0;
+		  left:0;
+		  display: none;
+		}
+		.modal{
+			position: absolute;
+			width: 695px;
+			height: 447px;
+			top: 25%;
+			left: 25%;
+			background: white;
+			text-align: center;
+			color:#3b31a8; 
+		}
+		.modal a{
+			float: right;
+			margin-top: 10px;
+			margin-right: 10px;
+			text-decoration: none;
+			background-color: #DDE2EB;
+			color:#B2B4B9;
+			font-weight: 700;
+			padding: 10px;
+			border-radius: 50%;
+		}
+		.modal h1{
+			margin-top:93px;
+			margin-bottom:36px;
+		}
+		::placeholder{
+			padding: 1px;
+		}
+		.modal input{
+			width:438px;
+			height:37px;
+			margin-bottom: 10px; 
+			
+		}
+		.modal label{
+			margin-bottom: 5px;
+			margin-left:128px;
+			display: block;
+			text-align: left;
+			color: black;
+			font-weight: 400;
+		}
+		.modal button{
+			display: inline-block;
+			text-decoration: none;
+			text-align: center;
+			color: white;
+			font-size:18px;
+			width: 442px;
+			height: 62px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			line-height: 60px;
+			border-radius: 30px;
+			background-color: #3b31a8;
+			border: none;
+		}
+		.modal p{
+			font-size: 12px;
+			color: #7779;
+			margin-top: 24px;
+		}
+		@media screen and (max-width: 599.98px) {
+		header{
+         	height: 850px;
+         }
+		.header-content{
+         	grid-template-columns: auto;
+         	padding: 5px;
+         }
+         .header-content ul li p{
+         	width: 100%;
+         }
+         .header-content ul{
+         	margin: 0px 0px 0px 0px;
+         }
+         .header-content ul li img{
+         	width: 250px;
+         }
+         section{
+         	height: 100%;
+         }
+         .container{
+         	grid-template-columns: auto;
+         	margin: 0px 0px 0px 0px;
+         	padding: 0px 0px 0px 0px;
+         	width: 100%;
+         }
+         section a{
+         	width: 100%;
+         }
+         .modal label{
+         	margin-left: 0px;
+         }
+         .modal{
+         	width: 90%;
+         	left: 5%;
+
+         }
+         .modal form{
+         	padding: 10px;
+         }
+         .modal input{
+         	width: 100%;
+         }
+         .modal button{
+         	width: 100%;
+         }
+		}
+		@media screen and (max-width: 399.98px) {
+         header{
+         	height: 850px;
+         }
+         .header-content{
+         	grid-template-columns: auto;
+         	padding: 5px;
+         }
+         .header-content ul{
+         	margin: 0px 0px 0px 0px;
+         }
+         .header-content ul li p{
+         	width: 100%;
+         }
+         .header-content ul li img{
+         	width: 250px;
+         }
+         section{
+         	height: 100%;
+         }
+         .container{
+         	grid-template-columns: auto;
+         	margin: 0px 0px 0px 0px;
+         	padding: 0px 0px 0px 0px;
+         	width: 100%;
+         }
+         section a{
+         	width: 100%;
+         }
+         .modal label{
+         	margin-left: 0px;
+         }
+         .modal{
+         	width: 90%;
+         	left: 5%;
+
+         }
+         .modal form{
+         	padding: 10px;
+         }
+         .modal input{
+         	width: 100%;
+         }
+         .modal button{
+         	width: 100%;
+         }
+      }
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header-content">
+			<ul>
+				<li><h1>The 5 Best Apps <br> for Life Hacking</h1></li>
+				<li><p>Life is hard enough as is. Take some of the stress out of your daily routine with our list of 5 hot apps to hack your habits (they’re all free).</p></li>
+				<li style="text-align: left;"><a href="#" class="getlist">GET THE LIST</a></li>
+			</ul>
+			<ul>
+				<li><img src="https://lh3.googleusercontent.com/lR09nDJV71r3zv-PfivAzUGkNg8rujXVi3bX4I9WLn6cAbxbL1KT2WUryGSb2GjhCkilziaBKn2KZSA3VdlCug=w237" alt="Logo-Header"></li>
+			</ul>
+		</div>
+	</header>
+	<section>
+		<div class="container">
+			<ul>
+				<li><img src="https://lh3.googleusercontent.com/B4x_8g76ZjXiOA8azCm4yRr5AdVmDK4E4USME3V5QJCGCiU3It1doaslFeyhR-eIUuTC31BQwq-20tQEq9IO=s0" alt="Money"></li>
+				<li><p>Take control of your budget</p></li>
+			</ul>
+			<ul>
+				<li><img src="https://lh3.googleusercontent.com/eyU7e3Vmioj-WUPyFBwWm3aulSSBPQ5GenE4F6Co6hgkR5k10ae5it4vIlzwXPQM02TOlqybHjB8kblQJVQgRQ=s0" alt="Calendar"></li>
+				<li><p>Never miss an appointment again</p></li>
+			</ul>
+			<ul>
+				<li><img src="https://lh3.googleusercontent.com/_izNN8oMo-E3Sl3_L41kFbM2vr9RU6YBsJDruUBAvirEhk26BaCN4Of61iWkq3ThwoQdXLxED83E_c7gTJtBdbY=s0" alt="Calendar"></li>
+				<li><p>A podcast player that actually does what it’s supposed to</p></li>
+			</ul>
+			<ul>
+				<li><img src="https://lh3.googleusercontent.com/GnlJgUl8muEUOode3_vRPwAQvvNvlljiSZ3VhHm8knnT5hd-RZbK64z5fT-3DzuId47Mgiqze4xyjpmj-JGOkg=s0" alt="Time"></li>
+				<li><p>Stay focused during crunch time</p></li>
+			</ul>
+			<ul>
+				<li></li>
+			</ul>
+			<ul >
+				<li><img src="https://lh3.googleusercontent.com/pYRE3dTz3agn43JXUt19vt_0X2NZGAhV1pTTy8cjQtoddLCsfnJdAYwEZ4hoSLc8AYc1e7OU3x26oJkpM4SzOAI=s0" alt="Time"></li>
+				<li><p>Get the rest you need to thrive every day</p></li>
+			</ul>		
+		</div>
+		<div style="text-align: center; margin-top: 50px; padding: 10px;">
+			<a href="#" class="getlist">GET THE LIST</a>
+			<p style="margin-top: 10px; color: white;">© Sleep App</p>
+		</div>
+	</section>
+	<div class="overlay">
+	<div class="modal">
+		<a href="#" id="close-btn"> X </a>
+		<h1>Where can we send the list?</h1>
+		<form action="">
+			<label for="email">Email</label>
+			<input type="text" placeholder="Email address"><br>
+			<button>SEND ME THE LIST</button>
+		</form>
+		<p>Privacy Policy: We hate spam and promise to keep your email address safe</p>
+	</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+			$(document).ready(function(){
+			$(".getlist").click(function(){
+				$(".overlay").fadeIn();
+			});
+			$(".overlay").click(function(){
+				$("#close-btn, .overlay").fadeOut();
+			});
+
+			});
+	</script>
+
+</body>
+</html>
